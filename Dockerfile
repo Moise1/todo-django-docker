@@ -11,5 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./ /usr/app
 
+EXPOSE ${PORT}
+
 CMD ["python", "manage.py", "runserver" ,"0.0.0.0:$PORT"]
 
